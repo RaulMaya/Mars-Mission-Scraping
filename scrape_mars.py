@@ -83,9 +83,9 @@ def scrape():
         w_image = wrapper.find('div', class_= 'wide-image-wrapper')
         li = wrapper.find('li')
         a = li.find_all('a')
-    for x in a:
-        link = x['href']
-        links_list.append(link)
+        for x in a:
+            link = x['href']
+            links_list.append(link)
     list_of_urls = ['https://marshemispheres.com/' + key_url for key_url in links_list]
 
     hemisphere_image_urls = []
