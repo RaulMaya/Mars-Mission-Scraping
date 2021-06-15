@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission To Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="my_style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1><b>Mission to Mars</b></h1>
+      <p><a class="btn btn-primary btn-danger" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2><b>Breaking News:</b> {{ mars.News_Title }}</h2>
+                <p><b>Description:</b> {{ mars.News_Paragraph }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-lg-8">
+                <h2><b>Featured Mars Image</b></h2>
+                <p><img src="{{ mars.Featured_Image_Url }}" alt="featured_imaged"></p>
+            </div>
+            <div class="col col-lg-4">
+                <h3><b>Mars Facts</b></h3>
+                <table class="table table-dark">
+                  <thead>
+                    <tr style="color: #FFFFFF; text-align: center;">
+                      <th></th>
+                      <th>Mars</th>
+                      <th>Earth</th>
+                    </tr>
+                    <tr>
+                      <th>Description</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>Mars - Earth Comparison</th>
+                      <td>Mars</td>
+                      <td>Earth</td>
+                    </tr>
+                    <tr>
+                      <th>Diameter:</th>
+                      <td>6,779 km</td>
+                      <td>12,742 km</td>
+                    </tr>
+                    <tr>
+                      <th>Mass:</th>
+                      <td>6.39 × 10^23 kg</td>
+                      <td>5.97 × 10^24 kg</td>
+                    </tr>
+                    <tr>
+                      <th>Moons:</th>
+                      <td>2</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <th>Distance from Sun:</th>
+                      <td>227,943,824 km</td>
+                      <td>149,598,262 km</td>
+                    </tr>
+                    <tr>
+                      <th>Length of Year:</th>
+                      <td>687 Earth days</td>
+                      <td>365.24 days</td>
+                    </tr>
+                    <tr>
+                      <th>Temperature:</th>
+                      <td>-87 to -5 °C</td>
+                      <td>-88 to 58°C</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <h2><b>Mars Hemispheres</b></h2>
+            </div>
+        </div>
+        <div class="col col-lg-3">
+            <div class="card">
+              <img src="{{ mars.Cerberus_Link }}" class="card-img-top imgpad" alt="Cerberus" style="width: 25rem;">
+              <div class="card-body">
+                <h5 class="card-title">Cerberus</h5>
+                <p class="card-text">{{ mars.Cerberus }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-3">
+            <div class="card">
+              <img src="{{ mars.Schiaparelli_Link }}" class="card-img-top imgpad" alt="Schiaparelli" style="width: 25rem;">
+              <div class="card-body">
+                <h5 class="card-title">Schiaparelli</h5>
+                <p class="card-text">{{ mars.Schiaparelli }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-3">
+            <div class="card">
+              <img src="{{ mars.Syrtis_Link }}" class="card-img-top imgpad" alt="Syrtis Major" style="width: 25rem;">
+              <div class="card-body">
+                <h5 class="card-title">Syrtis Major</h5>
+                <p class="card-text">{{ mars.Syrtis }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-3">
+            <div class="card">
+              <img src="{{ mars.Valles_Link }}" class="card-img-top imgpad" alt="Valles Marineris" style="width: 25rem;">
+              <div class="card-body">
+                <h5 class="card-title">Valles Marineris</h5>
+                <p class="card-text">{{ mars.Valles }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    </div>
+  </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

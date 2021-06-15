@@ -2,8 +2,9 @@ from bs4 import BeautifulSoup
 from splinter import Browser
 from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
-import requests
+import random
 import pymongo
+import requests
 
 def scrape():
     executable_path = {'executable_path': ChromeDriverManager().install()}
@@ -11,9 +12,9 @@ def scrape():
 
     conn = 'mongodb://localhost:27017'
     client = pymongo.MongoClient(conn)
-
     db = client.mars_mission_db
     collection = db.mars
+    collection.drop()
 
     url = 'https://redplanetscience.com/'
     browser.visit(url)
@@ -96,12 +97,36 @@ def scrape():
         hemisphere_image_urls.append(images_dict)
         number = number + 1
 
-    scrap_data = {'News Title':news_title,
-    'News Paragraph':news_p,
-    'Featured Image_Url':featured_image_url,
-    'Image Titles':titles_list,
-    'List of Links':list_of_urls}
+    lenght = len(news_title) - 1
+    new_number = random.randint(0,lenght)
 
-    collection.insert_one(scrap_data)
+    selected_title = news_title[new_number]
+    selected_paragraph = news_p[new_number]
+
+    cerberus_image = titles_list[0]
+    cerberus_link = list_of_urls[0]
+    schiaparelli_image = titles_list[1]
+    schiaparelli_link = list_of_urls[1]
+    syrtis_image = titles_list[2]
+    syrtis_link = list_of_urls[2]
+    valles_image = titles_list[3]
+    valles_link = list_of_urls[3]
+
+    scrap_values = {}
+    scrap_values['News_Title'] = selected_title
+    scrap_values['News_Paragraph']  = selected_paragraph
+    scrap_values['Featured_Image_Url'] = featured_image_url
+    scrap_values['Cerberus'] = cerberus_image
+    scrap_values['Cerberus_Link'] = cerberus_link
+    scrap_values['Schiaparelli'] = schiaparelli_image
+    scrap_values['Schiaparelli_Link'] = schiaparelli_link
+    scrap_values['Syrtis'] = syrtis_image
+    scrap_values['Syrtis_Link'] = syrtis_link
+    scrap_values['Valles'] = valles_image
+    scrap_values['Valles_Link'] = valles_link
+
+    collection.insert_one(scrap_values)
+
     browser.quit()
-    return("Web Scraping Completed")
+
+    return scrap_values
