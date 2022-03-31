@@ -4,7 +4,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 import random
 import pymongo
-import requests
+
 
 def scrape():
     executable_path = {'executable_path': ChromeDriverManager().install()}
