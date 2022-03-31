@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Monoton");
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300&family=Open+Sans:wght@500&display=swap');
+
+body{
+  background-color: #F4DFBA;
+}
+.jumbotron {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Monoton", Helvetica, sans-serif;
+  background: #F49E4C;
+  letter-spacing: 5px;
+  padding: 12px;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.25);
+  color: rgb(255, 255, 255);
+  border: 1.5px solid #F76E11;
+}
+  
+
+h1 {
+  display: inline;
+  font-size: 15vw;
+  text-transform: uppercase;
+  color: #F49E4C;
+}
+@media (min-width: 700px) {
+  h1 {
+    font-size: 9vw;
+  }
+}
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 150px;
+  }
+}
+
+@supports (-webkit-background-clip: text) {
+  h1 {
+    color: transparent;
+    background: linear-gradient(7deg, #F5EE9E 50%, #F49E4C 0);
+    -webkit-background-clip: text;
+  }
+}
+
+.btn{
+  margin-top: 20px;
+  background-color:#630606 ;
+}
+
+
+th {
+  background-color: #e7e7e7;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: black;
+  border: 1px solid #000000
+}
+tr {
+  background-color: #ffffff;
+
+  border: 1px solid #000000
+}
+
+
+.card{
+  background-color: #e7e7e7;
+  border-radius: 6px;
+  border: 1px solid #630606
+}
+
+.card-img-top{
+  width: 23rem;
+  padding-top: 10px;
+
+}
+
+.title-class{
+  color: #630606;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-size: 6rem;
+}
+
+.titles{
+  color: #000000;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-size: 3rem;
+}
+
+.my-img{
+  width: 75rem;
+  height: 41.60rem;
+  border: 5px solid #e7e7e7;
+  border-radius: 6px;
+}
+
+p{
+  color: #000000;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-size: 1.25rem;
+}
+
+.desc{
+  color: #000000;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-size: 2rem;
+}
