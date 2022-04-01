@@ -4,7 +4,7 @@ import scrape_mars
 
 
 app = Flask(__name__)
-mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_mission_db")
+mongo = PyMongo(app, uri="mongodb+srv://dbMarsUser:TerraMars95@mars-scraping.femkc.mongodb.net/mars_mission_db")
 
 @app.route("/")
 def home():

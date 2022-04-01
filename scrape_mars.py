@@ -10,8 +10,9 @@ def scrape():
     executable_path = {'executable_path': ChromeDriverManager().install()}
     browser = Browser('chrome', **executable_path, headless=False)
 
-    conn = 'mongodb://localhost:27017'
-    client = pymongo.MongoClient(conn)
+    ## conn = 'mongodb://localhost:27017'
+    ## client = pymongo.MongoClient(conn)
+    client = pymongo.MongoClient("mongodb+srv://dbMarsUser:TerraMars95@mars-scraping.femkc.mongodb.net")
     db = client.mars_mission_db
     collection = db.mars
     collection.drop()
