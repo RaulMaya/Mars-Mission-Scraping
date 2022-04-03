@@ -14,8 +14,8 @@ def home():
 @app.route("/scrape")
 def scrape():
     scrap_values= scrape_mars.scrape()
-    print(scrap_values['News_Title'])
-    mongo.db.mars.update({}, scrap_values, upsert=True)
+    print(scrap_values)
+    mongo.db.mars.update_one({}, {"$set":scrap_values}, upsert=True)
 
     return redirect("/")
 
