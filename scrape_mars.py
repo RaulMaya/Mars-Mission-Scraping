@@ -97,6 +97,7 @@ def scrape():
         except:
             sleep(5)
             browser.visit(mars_hemispheres_url)
+        sleep(7)
         browser.links.find_by_partial_text(t).click()
         html = browser.html
         soup = BeautifulSoup(html, 'html.parser')
