@@ -32,8 +32,11 @@ def scrape():
     html = browser.html
     soup = BeautifulSoup(html, 'html.parser')
 
+    sleep(2)
     news = soup.find('section', class_='image_and_description_container')
+    sleep(2)
     titles = news.find_all('div', class_='content_title')
+    sleep(2)
     descriptions = news.find_all('div', class_='article_teaser_body')
 
     for title in titles:
@@ -122,7 +125,13 @@ def scrape():
         number = number + 1
 
     lenght = len(news_title) - 1
-    new_number = random.randint(0,lenght)
+    print(lenght)
+    try:
+        new_number = random.randint(0,lenght)
+    except:
+        sleep(2)
+        new_number = random.randint(0,lenght)
+
 
     selected_title = news_title[new_number]
     selected_paragraph = news_p[new_number]
