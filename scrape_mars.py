@@ -34,9 +34,9 @@ def scrape():
 
     sleep(2)
     news = soup.find('section', class_='image_and_description_container')
-    sleep(2)
+    sleep(4)
     titles = news.find_all('div', class_='content_title')
-    sleep(2)
+    sleep(4)
     descriptions = news.find_all('div', class_='article_teaser_body')
 
     for title in titles:

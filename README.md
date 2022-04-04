@@ -1,111 +1,62 @@
-<h1><u>Mars Mission</u></h1>
-<hr>
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/RaulMaya/Mars-Mission-Scraping">
+    <img src="static/3D_Mars.png" alt="Logo" width="150" height="150">
+  </a>
 
-![Mars](images/mars.jpg)
-<hr>
+  <h2 align="center">Web Scraping: Mars Data</h2>
 
-### <u>Background</u>
-The user needs an app, that scrapes various websites for data related to the Mission to Mars and shows the information in a HTML page.
-<br>
+<p align="center">
+This project is a web application that scrapes data from various websites related to the Mission on Mars, the app will store the scraped information in a database and display the information in a single HTML page.
+    <br/>
+    <br/>
+    <a href="https://github.com/RaulMaya/Mars-Mission-Scraping/blob/master/mission_to_mars.ipynb">Jupyter Notebook</a>
+    ·
+    <a href="https://scraping-mars-info.herokuapp.com/">Web App Deployment</a>
+    ·
+    <a href="https://github.com/RaulMaya/Mars-Mission-Scraping/blob/master/app.py">App</a>
+  </p>
+</div>
 
-The web pages that the user demand to make the scraping of are the following:
-1. https://redplanetscience.com
-<br>
+<!-- ABOUT THE PROJECT -->
+### Scraped Web Sites
 
-![Mars](images/scrape1.png)
-2. https://spaceimages-mars.com
-<br>
-
-![Mars](images/scrape2.png)
-3. https://galaxyfacts-mars.com
-<br>
-
-![Mars](images/scrape3.png)
-4. https://marshemispheres.com
-<br>
-
-![Mars](images/scrape4.png)
-
-<hr>
-
-### <u>Tools</u>
-* Python
-* BeautifulSoup
-* Splinter
-* Web Driver Manager
-* Pymongo
-* Mongo DB
-* Jupyter Notebook
-* Visual Studio Code
-
-<hr>
-
-### <u>How does the app work?</u>
-
-#### <p>Installing Complements</p>
-
-   - Installing Flask Pymongo
-    * Code: pip install Flask-PyMongo
-    ![Mars](images/mistake1.png)
+1. <a href="https://redplanetscience.com">Red Planet Science</a>
+2. <a href="https://spaceimages-mars.com">Mars Space Images</a>
+3. <a href="https://galaxyfacts-mars.com">Galaxy Facts</a>
+4. <a href="https://marshemispheres.com">Mars Hemispheres</a>
 
 
-   - Installing BeautifulSoup
-    * Code: pip install beautifulsoup4
-    ![Mars](images/mistake5.png)
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### About The Project
+
+![mars.jpg](images/mars.jpg)
+
+The project consists of developing a Web Page that is powered with a program that extracts data from different websites related to the planet Mars. All the extracted information will be stored in a <a href="https://www.mongodb.com/">Mongo</a> database. So when the information is in the database, the program will call the new scraped data and replace the old data from our main web page with the new information from our <a href="https://www.mongodb.com/">Mongo</a> database.
 
 
-   - Installing Splinter
-    * Code: pip install Splinter
-    ![Mars](images/mistake2.png)
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
-   - Installing Web-Driver Manager
-    * Code: pip install webdriver-manager
-    ![Mars](images/mistake3.png)
+### Project Dependencies
 
-
-   - Installing Lxml
-    * Code: pip install lxml
-    ![Mars](images/mistake4.png)
-
-#### <p>Running the App</p>
-
-1. Open your terminal so you can run your app. Run it with the following code "python 'name_of_your_app.py'", for example my app is called "mars_app.py", so to run the app, the code in the terminal will be: "python mars_app.py". If everything is working correctly the terminal will output a https address: "http://127.0.0.1:5000/"
-![Mars](images/img3.png)
-<br>
-
-2. When you open the http address http://127.0.0.1:5000/ in the browser, the starting page will run a default scrape, and will store the values in the home page.
-![Mars](images/img1.png)
-<br>
-
-
-3. To scrape new values so that the home page refresh, with new data, we need to click in the button: "Scrape New Data".
-
-  ![Mars](images/img4.png)
-<br>
-
-
-4. When the user click on the "Scrape New Data" button, the program will make the calls and start scraping the selected web pages, and storing the information into a Mongo DB.
-![Mars](images/img2.png)
-<br>
-
-  ![Mars](images/img6.png)
-<br>
-
-
-5. The data stored in Mongo DB will power the new html page, with images, texts, tables, and headlines.
-![Mars](images/img5.png)
-<br>
+1. Flask
+2. BeautifulSoup
+3. Splinter
+4. Web Driver Manager
+5. Pymongo
+6. Flask-PyMongo
 
 
 
+### Contact :iphone:
 
-
-<hr>
-
-### <u>Contact</u>
 * Name: Raul Maya Salazar
 * Phone: +52 833 159 7006
 * E-mail: raulmayas20@gmail.com
 * GitHub: https://github.com/RaulMaya
 * LinkedIn: https://www.linkedin.com/in/raul-maya/
+
+<p align="right">(<a href="#top">back to top</a>)</p>
