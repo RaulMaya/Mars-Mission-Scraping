@@ -4,6 +4,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 import random
 import pymongo
+from time import sleep
 
 
 def scrape():
@@ -18,7 +19,12 @@ def scrape():
     collection.drop()
 
     url = 'https://redplanetscience.com/'
-    browser.visit(url)
+
+    try:
+        browser.visit(url)
+    except:
+        sleep(5)
+        browser.visit(url)
 
     news_title = []
     news_p = []
@@ -40,7 +46,12 @@ def scrape():
 
 
     mars_url = 'https://spaceimages-mars.com/'
-    browser.visit(mars_url)
+    try:
+        browser.visit(mars_url)
+    except:
+        sleep(5)
+        browser.visit(mars_url)
+        
     html = browser.html
     soup = BeautifulSoup(html, 'html.parser')
 
@@ -60,7 +71,11 @@ def scrape():
 
 
     mars_hemispheres_url = 'https://marshemispheres.com/'
-    browser.visit(mars_hemispheres_url)
+    try:
+        browser.visit(mars_hemispheres_url)
+    except:
+        sleep(5)
+        browser.visit(mars_hemispheres_url)
 
     titles_list = []
     html = browser.html
@@ -77,7 +92,11 @@ def scrape():
 
     links_list = []
     for t in titles_list:
-        browser.visit(mars_hemispheres_url)
+        try:
+            browser.visit(mars_hemispheres_url)
+        except:
+            sleep(5)
+            browser.visit(mars_hemispheres_url)
         browser.links.find_by_partial_text(t).click()
         html = browser.html
         soup = BeautifulSoup(html, 'html.parser')
