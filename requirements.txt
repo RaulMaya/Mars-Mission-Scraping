@@ -24,4 +24,3 @@ Flask-PyMongo==2.3.0
 dnspython
 heroku
 lxml
-time
