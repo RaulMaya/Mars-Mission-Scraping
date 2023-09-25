@@ -8,7 +8,15 @@ from time import sleep
 
 
 def scrape():
-    executable_path = {'executable_path': ChromeDriverManager().install()}
+    try:
+        executable_path = {'executable_path': ChromeDriverManager().install()}
+    except:
+        # Specify the ChromeDriver version
+        chrome_version = "114.0.5735.90"
+
+        # Set up the executable path with the specified version
+        executable_path = {'executable_path': ChromeDriverManager(version=chrome_version).install()}
+        
     browser = Browser('chrome', **executable_path, headless=False)
 
     ## conn = 'mongodb://localhost:27017'
